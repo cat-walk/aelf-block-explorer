@@ -11,12 +11,13 @@ import ReactEchartsCore from 'echarts-for-react/lib/core';
 import echarts from 'echarts/lib/echarts';
 
 import { isBeforeToday } from '@utils/timeUtils';
-import { ELF_DECIMAL, SYMBOL } from '@config/config';
+import { SYMBOL } from '@config/config';
 import dayjs from 'dayjs';
 import moment from 'moment';
 import { get } from '../../../../../utils';
 import formateTurnoverList from '../../../../../utils/formateTurnoverList';
 import {
+  ELF_DECIMAL,
   RESOURCE_TURNOVER,
   RESOURCE_CURRENCY_CHART_FETCH_INTERVAL
 } from '../../../../../constants';
@@ -394,8 +395,8 @@ class ResourceCurrencyChart extends PureComponent {
     const chartHeight = isSmallScreen ? 450 : 470;
 
     return (
-      <div className='resource-currency-chart'>
-        <div className='select-button'>{selectButton}</div>
+      <div className="resource-currency-chart">
+        <div className="select-button">{selectButton}</div>
         {/* <Spin size='large' spinning={loading}> */}
         <ReactEchartsCore
           echarts={echarts}
